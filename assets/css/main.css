@@ -3702,9 +3702,10 @@ input, select, textarea {
 
 		#banner .image-wrapper .frame {
 			height: auto;
-			width: 100%;
-			margin-top:-12em;
-			margin-left:1em;
+			width: 110%;
+			margin-top: -13em;
+			margin-left: -3em;
+  			transform: scaleX(-1);
 		}
 
 		#banner .image-wrapper .image {

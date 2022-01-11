@@ -1,8 +1,4 @@
-/*
-	Momentum by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
+
 
 (function($) {
 
@@ -15,7 +11,7 @@
 	};
 
 	/**
-	* Custom carousel for Momentum.
+	* Custom carousel
 	* @return {jQuery} jQuery object.
 	*/
 	$.fn._carousel = function(options) {
