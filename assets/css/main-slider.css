@@ -1,0 +1,212 @@
+
+/* Carousel */
+
+	.carousel {
+		margin: 0 0 2.5rem 0;
+		position: relative;
+	}
+
+		.carousel article {
+			display: -moz-flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			display: flex;
+			-moz-align-items: -moz-stretch;
+			-webkit-align-items: -webkit-stretch;
+			-ms-align-items: -ms-stretch;
+			align-items: stretch;
+			-moz-transform: translateY(0.5em);
+			-webkit-transform: translateY(0.5em);
+			-ms-transform: translateY(0.5em);
+			transform: translateY(0.5em);
+			-moz-transition: all 0.35s ease-in-out;
+			-webkit-transition: all 0.35s ease-in-out;
+			-ms-transition: all 0.35s ease-in-out;
+			transition: all 0.35s ease-in-out;
+			background-color: #d54857;
+			margin: 0 auto;
+			max-width: 80rem;
+			opacity: 0;
+			visibility: hidden;
+			width: 100%;
+		}
+
+			.carousel article.visible {
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				opacity: 1;
+				visibility: visible;
+			}
+
+			.carousel article .image {
+				border-radius: 0;
+				display: block;
+				width: 100%;
+			}
+
+				.carousel article .image img {
+					border-radius: 0;
+					display: block;
+					height: 100%;
+					width: 100%;
+				}
+
+			.carousel article .content {
+				padding: 5.5rem 5rem 3rem 5rem ;
+				text-align: left;
+			}
+
+		.carousel nav a {
+			-moz-transition: opacity 0.2s ease-in-out;
+			-webkit-transition: opacity 0.2s ease-in-out;
+			-ms-transition: opacity 0.2s ease-in-out;
+			transition: opacity 0.2s ease-in-out;
+			background-image: url("images/arrow.svg");
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: 5rem;
+			color: rgba(0, 0, 0, 1);
+			cursor: pointer;
+			height: 8rem;
+			margin-top: -4rem;
+			opacity: 1;
+			position: absolute;
+			top: 50%;
+			width: 6rem;
+			z-index: 99;
+		}
+
+			.carousel nav a .label {
+				display: none;
+			}
+
+			.carousel nav a.previous {
+				-moz-transform: scaleX(-1);
+				-webkit-transform: scaleX(-1);
+				-ms-transform: scaleX(-1);
+				transform: scaleX(-1);
+				left: 3rem;
+			}
+
+			.carousel nav a.next {
+				right: 3rem;
+			}
+
+			.carousel nav a:hover {
+				opacity: 0.50;
+			}
+
+		@media screen and (max-width: 1680px) {
+
+			.carousel article {
+				max-width: calc(100% - 6rem);
+			}
+
+				.carousel article .content {
+					padding: 7rem 4rem 4.5rem 4rem ;
+				}
+
+			.carousel nav {
+				bottom: 1rem;
+				position: absolute;
+				right: 4rem;
+			}
+
+				.carousel nav a {
+					background-size: 3rem;
+					display: inline-block;
+					height: 3rem;
+					margin-top: 0;
+					position: relative;
+					top: 50%;
+					width: 3rem;
+					z-index: 99;
+				}
+
+					.carousel nav a.previous {
+						left: 0;
+					}
+
+					.carousel nav a.next {
+						right: 0;
+					}
+
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			.carousel article {
+				max-width: calc(100% - 6rem);
+			}
+
+		}
+
+		@media screen and (min-width: 737px) and (max-width: 980px) {
+
+			.carousel article .content {
+				text-align: center;
+			}
+
+			.carousel article .image {
+				height: 28rem;
+			}
+
+			.carousel article ul.actions {
+				-moz-justify-content: center;
+				-webkit-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+			}
+
+		}
+
+		@media screen and (max-width: 980px) {
+
+			.carousel article {
+				-moz-transform: translateY(0);
+				-webkit-transform: translateY(0);
+				-ms-transform: translateY(0);
+				transform: translateY(0);
+				display: block !important;
+				margin-top: 3rem;
+				opacity: 1;
+				visibility: visible;
+			}
+
+				.carousel article:first-child {
+					margin-top: 0;
+				}
+
+				.carousel article .content {
+					padding: 3rem 2rem 0.5rem 2rem ;
+				}
+
+			.carousel nav {
+				display: none;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.carousel article {
+				margin-top: 2rem;
+				max-width: calc(100% - 4rem);
+			}
+
+				.carousel article .image {
+					height: 18rem;
+				}
+
+		}
+
+		@media screen and (min-width: 361px) and (max-width: 480px) {
+
+			.carousel article .image {
+				height: 9rem;
+			}
+
+		}
+
